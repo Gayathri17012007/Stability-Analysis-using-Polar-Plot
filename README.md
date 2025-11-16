@@ -40,11 +40,12 @@ end
 ~~~
 
 ## Output:
+<img width="1468" height="970" alt="Screenshot 2025-11-16 140859" src="https://github.com/user-attachments/assets/0dbcc90f-e98d-4261-9d88-894c5732355c" />
 
 ## Result:
 Thus the polar plot for the given transfer function was drawn and verified using MATLAB. <br>
 Gain margin =  Inf <br>
 Phase Margin = 101.5370 degree <br>
 Gain crossover frequency = 1.9596 rad/s <br>
-Phase crossover frequency = <br>
+Phase crossover frequency = Inf <br>
 The system is  Unstable
