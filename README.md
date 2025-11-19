@@ -21,13 +21,13 @@ Computer with MATLAB software
 ## Program: 
 ~~~
 num=[1]
-den=[conv(1,0),conv(1,0.5),conv(1,0.2)]
+den = conv([1 0], conv([0.5 1], [0.2 1]));
 sys=tf(num,den)
-w=logspace(-1,2,1000)
-[mag phase]=bode(sys,w)
-mag=squeeze(mag)
-phase=squeeze(phase)
-theta=deg2rad(phase)
+w=logspace(-1,2,1000);
+[mag phase]=bode(sys,w);
+mag=squeeze(mag);
+phase=squeeze(phase);
+theta=deg2rad(phase);
 polarplot(theta,mag,'LineWidth',1.5)
 [gm pm wpc wgc]=margin(sys)
 if (wpc>wgc)
@@ -40,12 +40,12 @@ end
 ~~~
 
 ## Output:
-<img width="1468" height="970" alt="Screenshot 2025-11-16 140859" src="https://github.com/user-attachments/assets/0dbcc90f-e98d-4261-9d88-894c5732355c" />
+<img width="1210" height="997" alt="Screenshot 2025-11-19 142220" src="https://github.com/user-attachments/assets/26a96e84-1640-4a36-a0d4-17c9cbb63029" />
 
 ## Result:
 Thus the polar plot for the given transfer function was drawn and verified using MATLAB. <br>
-Gain margin =  Inf <br>
-Phase Margin = 101.5370 degree <br>
-Gain crossover frequency = 1.9596 rad/s <br>
-Phase crossover frequency = Inf <br>
-The system is  Unstable
+Gain margin =  7.0000 rad/s <br>
+Phase Margin = 55.6412 degree <br>
+Gain crossover frequency =  0.8979 rad/s <br>
+Phase crossover frequency = 3.1623 rad/s <br>
+The system is  Stable
